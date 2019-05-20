@@ -1,0 +1,22 @@
+#应用程序名称
+spring:
+  application:
+    name: customer
+
+#端口
+server:
+  port: 9002
+#指定当前的应用/服务名,相同的服务应同名
+dubbo:
+  application:
+    name: customer
+#  protocol:
+#    name: dubbo
+#    port: 20880
+  registry:
+    address: zookeeper://127.0.0.1:2181
+    version: 1.0.0
+
+demo:
+  service:
+    version: 1.0.0

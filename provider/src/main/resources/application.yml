@@ -1,0 +1,33 @@
+
+#应用程序名称
+spring:
+  application:
+    name: provider
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/execise_new?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+
+#端口
+server:
+  port: 9001
+#指定当前的应用/服务名,相同的服务应同名
+dubbo:
+  application:
+    name: provider
+    version: 1.0.0
+  protocol:
+    name: dubbo
+    port: 20880
+  registry:
+    address: zookeeper://127.0.0.1:2181
+  provider:
+    timeout: 10000
+demo:
+  service:
+    version: 1.0.0
+
+
+
